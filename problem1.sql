@@ -1,6 +1,3 @@
-/* Problem 1 */
-CREATE SCHEMA stg_prontuario;
-
 CREATE TABLE stg_prontuario.PACIENTE (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100),
