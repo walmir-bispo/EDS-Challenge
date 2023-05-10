@@ -1,0 +1,35 @@
+Para modelar essa situação, podemos seguir da seguinte forma:
+
+Criar três tabelas:
+1. Tabela de atendimento médico (stg_prontuario.ATENDIMENTO_MEDICO)
+2. Tabela de diagnósticos (stg_prontuario.DIAGNOSTICO)
+3. Tabela de relação entre atendimento médico e diagnóstico (stg_prontuario.ATENDIMENTO_DIAGNOSTICO)
+
+A tabela (ATENDIMENTO_MEDICO) teria informações gerais sobre o atendimento/campos relevantes
+para a aplicação. Cada registro nessa tabela teria um identificador único (id_atendimento)
+como chave primária.
+
+A tabela DIAGNOSTICO teria informações gerais sobre os diagnósticos. Cada registro nessa
+tabela também teria um identificador único (id_diagnostico) como chave primária.
+
+A tabela ATENDIMENTO_DIAGNOSTICO teria as chaves estrangeiras para as tabelas ATENDIMENTO_MEDICO
+e DIAGNOSTICO. Essa tabela permitirá que um atendimento médico possa ter vários diagnósticos
+associados a ele, e que um mesmo diagnóstico possa estar associado a vários atendimentos médicos.
+
+------------------------------------------------
+Dessa forma, a modelagem ficaria assim:
+
+Tabela ATENDIMENTO_MEDICO:
+id (chave primária)
+outras informações relevantes
+
+Tabela DIAGNOSTICO:
+id (chave primária)
+outras informações relevantes
+
+Tabela ATENDIMENTO_MEDICO_DIAGNOSTICO:
+id (chave primária)
+id_atendimento_medico (chave estrangeira referenciando ATENDIMENTO_MEDICO)
+id_diagnostico (chave estrangeira referenciando DIAGNOSTICO)
+outras informações relevantes
+------------------------------------------------
