@@ -2,13 +2,18 @@ Para modelar um atendimento médico que pode ter vários diagnósticos, é poss�
 uma para o atendimento médico e outra para os diagnósticos associados a esse atendimento.
 
 Tabela ATENDIMENTO:
-id (chave primária)
-outros campos relevantes (data, paciente, médico, etc)
+CREATE TABLE Atendimento (
+    id_atendimento INT PRIMARY KEY,
+    tipo_atendimento CHAR(1)
+);
 
-Tabela DIAGNOSTICO:
-id (chave primária)
-atendimento_medico_id (chave estrangeira para a tabela ATENDIMENTO)
-descrição
+
+Tabela DIAGNOSTICOS:
+CREATE TABLE Diagnosticos (
+    id_diagnostico INT PRIMARY KEY,
+    id_atendimento INT,
+    descricao_diagnostico TEXT
+);
 
 Dessa forma, a tabela ATENDIMENTO armazenaria os dados básicos do atendimento, já a tabela
 "diagnostico" armazenaria as informações referentes aos diagnósticos, com um campo para a
