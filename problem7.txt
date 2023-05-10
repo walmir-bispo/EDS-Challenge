@@ -14,8 +14,7 @@ Dessa forma, a tabela ATENDIMENTO armazenaria os dados básicos do atendimento, 
 "diagnostico" armazenaria as informações referentes aos diagnósticos, com um campo para a
 descrição do diagnóstico e uma referência ao atendimento médico ao qual ele está associado.
 
-Com essa modelagem, seria possível realizar consultas para obter informações sobre um
-determinado atendimento médico e todos os diagnósticos associados a ele. Além disso,
-seria possível cadastrar novos diagnósticos para um atendimento já existente ou excluir
-diagnósticos antigos se necessário.
+Com essa modelagem, é permitido que possamos registrar vários diagnósticos para um único
+atendimento, também seria possível realizar consultas para obter informações sobre um
+determinado atendimento médico e todos os diagnósticos associados a ele. 
 ------------------------------------------------
